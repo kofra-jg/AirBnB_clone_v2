@@ -10,7 +10,11 @@ import os
 
 
 def do_pack():
-    """generates a .tgz archive from the contents of the web_static"""
+    """generates a .tgz archive from the contents of the web_static
+
+        Return:
+               The absolute path of the archive if created. None otherwise
+    """
     local("mkdir -p versions")
     d = dt.datetime.now()
     name = f"versions/web_static_{d.year}{d.month}{d.day}"\
