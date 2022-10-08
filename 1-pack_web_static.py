@@ -16,6 +16,7 @@ def do_pack():
     Return:
         The absolute path of the archive if created. None otherwise
     """
+
     local("mkdir -p versions")
     d = dt.datetime.now()
     name = f"versions/web_static_{d.year}{d.month}{d.day}"\
